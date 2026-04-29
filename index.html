@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Inversión VW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="glass-nav">
+        <div class="logo">VW INVESTMENT LAB</div>
+        <div class="nav-links">
+            <a href="#historia">Inversión & Origen</a>
+            <a href="#mercado">Inversión Mercado (SOV)</a>
+            <a href="#portafolio">Inversión Portafolio</a>
+            <a href="#medios">Inversión en Medios</a>
+            <a href="#estrategia" style="color: var(--accent); font-weight: 800;">Recomendación Creativa</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="vw-ring"><span class="w-logo">W</span></div>
+            <h1 class="glitch-title">EL PODER DE LA <span class="highlight">INVERSIÓN</span></h1>
+            <p class="hero-subtitle">Rastreando 11 Millones de Dólares para Definir el Futuro de Volkswagen</p>
+            <div class="scroll-indicator"><p>Iniciar Análisis de Inversión</p><i class="fas fa-chevron-down"></i></div>
+        </div>
+        <div class="hero-bg"></div>
+    </header>
+
+    <!-- Historia y Percepción -->
+    <section id="historia" class="section">
+        <div class="container">
+            <h2 class="section-title">01. INVERSIÓN HISTÓRICA Y EVOLUCIÓN</h2>
+            <div class="grid-2">
+                <div class="creative-img fade-in">
+                    <img src="./vw_classic_beetle_1777476500789.png" alt="Volkswagen Clásico">
+                </div>
+                <div class="text-block glass-panel fade-in delay-1">
+                    <h3>La Inversión del Pasado: Utilidad</h3>
+                    <p>Antes, la marca no necesitaba invertir fortunas para vender un estatus; invertía en masificar el "Auto del Pueblo". La percepción era netamente utilitaria y conservadora. Era una inversión eficiente, pero de bajo margen de ganancia.</p>
+                </div>
+            </div>
+            
+            <div class="grid-2 reverse" style="margin-top: 50px;">
+                <div class="creative-img fade-in">
+                    <img src="./vw_modern_suv_1777476521722.png" alt="Volkswagen SUV">
+                </div>
+                <div class="text-block glass-panel fade-in delay-1">
+                    <h3>La Inversión Actual: Estatus Premium</h3>
+                    <p>Hoy, la data demuestra un giro de 180 grados. Volkswagen está inyectando todo su dinero en posicionarse como una marca aspiracional de <strong>Lujo Dinámico</strong>, invirtiendo fuertemente en su línea de SUVs (T-Cross, Taos).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mercado SOV -->
+    <section id="mercado" class="section">
+        <div class="container">
+            <h2 class="section-title">02. INVERSIÓN VS COMPETENCIA (SHARE OF VOICE)</h2>
+            <div class="grid-2 reverse">
+                <div class="chart-container glass-panel fade-in" style="height: 400px;">
+                    <canvas id="marketChart"></canvas>
+                </div>
+                <div class="text-block glass-panel fade-in delay-1">
+                    <h3>El Reto del Presupuesto (David vs Goliat)</h3>
+                    <p>En términos de INVERSIÓN PURA, Volkswagen ocupa el <strong>6º lugar</strong> (~$10.6 Millones). Chevrolet invierte 11 veces más (~$119M). Si VW usa su inversión para gritar en los mismos medios masivos que Chevrolet, su dinero se perderá en el ruido.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portafolio y Demografía -->
+    <section id="portafolio" class="section">
+        <div class="container">
+            <h2 class="section-title">03. DISTRIBUCIÓN DE INVERSIÓN (PRODUCTO Y TIEMPO)</h2>
+            
+            <div class="grid-2">
+                <div class="text-block glass-panel fade-in">
+                    <h3>Inversión por Modelo (Top Productos)</h3>
+                    <p>La marca ha decidido apostar su inversión a la categoría UTILITY. El <strong>T-Cross</strong> se lleva ~$3.1 Millones en inversión solitaria, convirtiéndose en el ancla que debe generar estatus para que los demás autos se vendan.</p>
+                </div>
+                <div class="chart-container glass-panel fade-in delay-1" style="height: 350px;">
+                    <canvas id="productChart"></canvas>
+                </div>
+            </div>
+
+            <div class="grid-2 reverse" style="margin-top: 50px;">
+                <div class="chart-container glass-panel fade-in" style="height: 350px;">
+                    <canvas id="seasonChart"></canvas>
+                </div>
+                <div class="text-block glass-panel fade-in delay-1">
+                    <h3>Curva de Inversión Estacional</h3>
+                    <p>VW invierte agresivamente en <strong>Febrero (~$2.1M)</strong> y <strong>Mayo (~$1.3M)</strong>. Es una táctica de inversión de "Anticipación": gastar el presupuesto antes de que la competencia sature fin de año.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medios -->
+    <section id="medios" class="section">
+        <div class="container">
+            <h2 class="section-title">04. INVERSIÓN POR CANAL Y FRECUENCIA</h2>
+            <div class="grid-2">
+                <div class="chart-container glass-panel fade-in" style="height: 400px;">
+                    <canvas id="mediaChart"></canvas>
+                </div>
+                <div class="text-block glass-panel fade-in delay-1">
+                    <h3>La Dependencia Radial y el Peligro del Dinero</h3>
+                    <p>Más de <strong>$6 Millones de Inversión</strong> van directos a la Radio (principalmente noticieros matutinos). Esto genera un asombroso volumen de <strong>9,153 inserciones comerciales</strong>.</p>
+                    <p style="color: var(--accent); font-weight: 600; margin-top: 15px;">Dato Crítico: Invertir $6 Millones para emitir el mismo anuncio 9,000 veces a conductores estresados puede destruir el valor de la marca si la pieza no es perfecta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECOMENDACION CREATIVA (SOLICITUD EXACTA) -->
+    <section id="estrategia" class="section final-section" style="padding-top: 20px;">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--accent); font-size: 2rem; border-left-color: var(--accent);">RECOMENDACION BASADO EN EL ESTADO ACTUAL DE LA MARCA Y PIEZA CREATIVA</h2>
+            
+            <div class="text-center" style="margin-bottom: 50px;">
+                <h3 class="gradient-text" style="font-size: 4rem;">"SIENTE EL SILENCIO"</h3>
+                <p style="font-size: 1.3rem; color: #a0aabf; max-width: 900px; margin: 0 auto;">Campaña 100% justificada por la Data de Inversión (Categoría SUV + Estado de Challenger).</p>
+            </div>
+
+            <!-- POR QUÉ Y PARA QUÉ -->
+            <div class="grid-2" style="margin-bottom: 40px; align-items: stretch;">
+                <div class="glass-panel fade-in">
+                    <h4 style="color: var(--vw-light-blue); font-size: 1.5rem; margin-bottom: 15px;"><i class="fas fa-question-circle"></i> ¿POR QUÉ? (Justificación de Inversión)</h4>
+                    <ul class="data-list" style="color: #cbd5e1;">
+                        <li><strong>Estado Actual:</strong> Somos 6tos en Inversión. No podemos competir por ruido masivo contra Chevrolet. Debemos competir por <em>Calidad de Atención</em>.</li>
+                        <li><strong>Categoría:</strong> Invertimos $6.7M en SUVs (Utility). La competencia vende SUVs mostrando montañas irreales. Nosotros debemos vender la SUV como el antídoto al caos urbano diario.</li>
+                        <li><strong>Medios:</strong> Invertimos $6M en Radio. 9,153 veces el mismo anuncio envejece la marca. Debemos "hackear" el medio.</li>
+                    </ul>
+                </div>
+                <div class="glass-panel fade-in delay-1">
+                    <h4 style="color: var(--vw-light-blue); font-size: 1.5rem; margin-bottom: 15px;"><i class="fas fa-bullseye"></i> ¿PARA QUÉ? (Objetivos)</h4>
+                    <ul class="data-list" style="color: #cbd5e1;">
+                        <li>Romper la "Ceguera Auditiva" de la Radio usando <strong>Silencio</strong> para recuperar el 100% de la atención de nuestra inversión.</li>
+                        <li>Re-posicionar a Volkswagen como una marca <strong>Premium ("Lujo Accesible")</strong>, alejándola del "Auto de Pueblo" y acercándola al confort y diseño alemán superior.</li>
+                        <li>Optimizar el ROI de la gigantesca inversión radial de Febrero/Mayo.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ANÁLISIS COMPETITIVO Y MEJOR CANAL -->
+            <div class="grid-2" style="margin-bottom: 60px; align-items: stretch;">
+                <div class="glass-panel fade-in" style="border-top: 4px solid #ff4a5a;">
+                    <h4 style="color: #ff4a5a; font-size: 1.4rem; margin-bottom: 15px;"><i class="fas fa-eye-slash"></i> ¿Qué hace la competencia que NO hacemos?</h4>
+                    <p style="color: #cbd5e1; margin-bottom: 15px;">Chevrolet y Renault inyectan decenas de millones en <strong>TV Nacional</strong> (saturación visual masiva). Marcas como Nissan invierten en experiencias visuales. <br><br>VW está atrapada en la <strong>"Ceguera Visual"</strong>: Gasta casi todo en Radio (medio ciego). Nadie puede desear el diseño de una T-Cross si no la puede ver.</p>
+                </div>
+                <div class="glass-panel fade-in delay-1" style="border-top: 4px solid #00b0f0;">
+                    <h4 style="color: #00b0f0; font-size: 1.4rem; margin-bottom: 15px;"><i class="fas fa-tv"></i> ¿Cuál es el Mejor Canal y la Mejor Inversión?</h4>
+                    <p style="color: #cbd5e1; margin-bottom: 15px;">El público objetivo de una SUV (ejecutivos, familias modernas) es altamente visual y digital. <br><br><strong>La Mejor Inversión:</strong> Reducir el 50% del gasto en Radio y trasladarlo a <strong>TV por Suscripción (Cable)</strong> y <strong>OOH Digital (Vallas)</strong>. La TV por Suscripción permite segmentar por poder adquisitivo, y las vallas muestran el diseño premium del vehículo en tamaño real.</p>
+                </div>
+            </div>
+
+            <!-- CÓMO SE VA A APLICAR (NUEVAS PROPUESTAS LLAMATIVAS) -->
+            <h4 style="color: #fff; font-size: 1.8rem; margin: 60px 0 30px; text-align: center;">PROPUESTAS PARA ESCALAR LA VISIBILIDAD (MULTICANAL)</h4>
+            
+            <!-- Pieza 1: Radio -->
+            <div class="grid-2 reverse" style="margin-bottom: 40px;">
+                <div class="creative-img fade-in">
+                    <img src="./vw_interior_peace_1777476997646.png" alt="Concepto Paz Interior SUV">
+                    <div class="image-caption">Aplicación Visual: Contraste entre el estrés exterior y la paz interior premium.</div>
+                </div>
+                <div class="glass-panel fade-in delay-1">
+                    <h4 style="color: var(--accent); font-size: 1.5rem; margin-bottom: 15px;">1. Hackeo Radial 8D (Corto Plazo)</h4>
+                    <p style="color: #cbd5e1;">Mientras hacemos la transición de presupuesto, el dinero que quede en Radio debe ser disruptivo.</p>
+                    <div style="background: rgba(0,0,0,0.5); padding: 15px; border-left: 3px solid var(--accent); margin-top: 15px; font-family: monospace;">
+                        <span style="color: #888;">[Audio Caótico de la calle]</span><br>
+                        <span style="color: #ff4a5a;">[CORTE SECO - Sonido de puerta de T-Cross cerrándose]</span><br>
+                        <span style="color: #fff;">[10 SEGUNDOS DE SILENCIO ABSOLUTO ASMR]</span><br>
+                        <span style="color: var(--vw-light-blue);">"El lujo es tener el poder de hacer silencio. T-Cross."</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pieza 2: FOOH (Fake OOH) Digital -->
+            <div class="grid-2" style="margin-bottom: 60px;">
+                <div class="glass-panel fade-in">
+                    <h4 style="color: var(--accent); font-size: 1.5rem; margin-bottom: 15px;">2. Viralidad CGI (Fake OOH - Alto Impacto)</h4>
+                    <p style="color: #cbd5e1;">Para subir el nivel de visualización sin gastar los millones de Chevrolet, usaremos <strong>FOOH (Fake Out of Home)</strong>. <br><br><strong>La Propuesta:</strong> Videos CGI hiper-realistas para TikTok e Instagram donde una T-Cross gigante sale de la pantalla del Movistar Arena en Bogotá. Cuesta una fracción de la TV, pero genera millones de vistas orgánicas por lo impactante de la ilusión óptica. Esto eleva la marca a un estatus tecnológico inalcanzable para la competencia tradicional.</p>
+                </div>
+                <div class="creative-img fade-in delay-1">
+                    <img src="./vw_billboard_mockup_1777476705532.png" alt="Valla Publicitaria">
+                </div>
+            </div>
+
+            <!-- ESTRATEGIA ESTACIONAL (DICIEMBRE VS ENERO) -->
+            <h4 style="color: #fff; font-size: 1.8rem; margin: 60px 0 30px; text-align: center;">TÁCTICAS ESTACIONALES PARA IDENTIDAD DE MARCA</h4>
+            
+            <div class="grid-2" style="margin-bottom: 60px; align-items: stretch;">
+                <div class="glass-panel fade-in" style="border-top: 4px solid #fff;">
+                    <h4 style="color: #fff; font-size: 1.4rem; margin-bottom: 15px;"><i class="fas fa-snowflake"></i> Diciembre: La Estrategia "Contracorriente"</h4>
+                    <p style="color: #cbd5e1; margin-bottom: 15px;"><strong>El Contexto:</strong> En diciembre, todas las marcas de autos enloquecen gritando ofertas, bonos y aguinaldos. La saturación publicitaria llega al 100%. Históricamente, VW invierte muy poco aquí (~$0.4M).</p>
+                    <p style="color: #cbd5e1;"><strong>La Pieza Creativa:</strong> "El Regalo de la Paz". Mientras Chevrolet grita "¡Cómpralo ya!", Volkswagen lanzará campañas puramente emocionales (Branding). Visuales de una familia durmiendo plácidamente en el asiento trasero de una Taos mientras viajan de noche, con el copy: <em>"Esta Navidad, el mejor regalo es llegar tranquilos. Siente el silencio."</em> Nos identificamos como la marca madura, elegante y alejada del desespero comercial.</p>
+                </div>
+                <div class="glass-panel fade-in delay-1" style="border-top: 4px solid var(--vw-light-blue);">
+                    <h4 style="color: var(--vw-light-blue); font-size: 1.4rem; margin-bottom: 15px;"><i class="fas fa-sun"></i> Enero/Febrero: "Dueños del Año"</h4>
+                    <p style="color: #cbd5e1; margin-bottom: 15px;"><strong>El Contexto:</strong> Históricamente, VW hace su mayor inversión en Febrero (~$2.1M). La competencia está exhausta después de diciembre y la mente del consumidor busca propósitos de año nuevo.</p>
+                    <p style="color: #cbd5e1;"><strong>La Pieza Creativa:</strong> "Tu Nuevo Territorio". Activaciones FOOH (CGI) y vallas Premium en la ciudad. El mensaje no es comprar un auto, es actualizar tu estatus operativo para el nuevo año. Mostrar la T-Cross como el "traje a la medida" para enfrentar los retos urbanos del nuevo año. <em>"El año nuevo exige un estándar nuevo. Tu ciudad, tus reglas."</em> Nos identificamos como la marca del éxito profesional y personal.</p>
+                </div>
+            </div>
+
+            <!-- APROXIMADOS Y CONCLUSIONES -->
+            <div class="grid-2" style="align-items: stretch;">
+                <div class="glass-panel fade-in" style="border-top: 4px solid var(--vw-light-blue);">
+                    <h4 style="color: var(--vw-light-blue); font-size: 1.4rem; margin-bottom: 15px;">Presupuestos Aproximados (Basado en Data)</h4>
+                    <p style="color: #cbd5e1;">Según el histórico de Inversión:<br>
+                    - <strong>Despliegue Radial (1 Trimestre):</strong> ~$2.5 Millones USD (Concentrado en Febrero y Marzo).<br>
+                    - <strong>Producción Audio 8D:</strong> Extremadamente bajo costo de producción comparado con TV (Ahorro del 80% en FX).<br>
+                    - <strong>OOH (Vallas Urbanas en BOG/MED):</strong> ~$800,000 USD mensuales para dominancia visual.</p>
+                </div>
+                <div class="glass-panel fade-in delay-1" style="border-top: 4px solid var(--accent);">
+                    <h4 style="color: var(--accent); font-size: 1.4rem; margin-bottom: 15px;">Conclusiones y Expectativas</h4>
+                    <ul style="color: #cbd5e1; line-height: 1.6; padding-left: 20px;">
+                        <li><strong>Impacto en Marca:</strong> Migración inmediata en encuestas de percepción hacia "Modernidad y Premium".</li>
+                        <li><strong>Efecto Halo:</strong> El impacto emocional del T-Cross y Taos arrastrará las ventas del Polo Track por asociación de estatus.</li>
+                        <li><strong>Eficiencia de Inversión:</strong> Al ser la única marca haciendo "Silencio" en radio, recordaremos a la audiencia que somos superiores a los $119M que grita Chevrolet.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
